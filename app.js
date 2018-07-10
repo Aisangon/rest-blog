@@ -6,9 +6,10 @@ mongoose = require("mongoose"),
 app = express();
 
 // APP CONFIG
-var url = process.env.DATABASEURL || "mongodb://localhost/restful_blog_app"
-mongoose.connect(url);
+/*var url = process.env.DATABASEURL || "mongodb://localhost/restful_blog_app"
+mongoose.connect(url);*/
 /*mongoose.connect("mongodb://localhost/restful_blog_app");*/
+mongoose.connect("mongodb://localhost:27017");
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
